@@ -3,7 +3,7 @@ let remoteStream = null;
 let localVideo = document.getElementById("localVideo");
 let remoteVideo = document.getElementById("remoteVideo");
 let peerConnection;
-var socket = io("ws://localhost:3000", {
+var socket = io("wss://15.207.180.128:3030", {
   transports: ["websocket"],
 });
 let serverConfig = {
