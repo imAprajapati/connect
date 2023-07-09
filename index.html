@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Home</title>
+</head>
+<body>
+  <div class="main-container">
+    <div class="video-container">
+      <video class="remotestream" id="remoteVideo" playsinline autoplay></video>
+      <div class="controls">
+        <button class="mute" id="muteAudio"><i class="fa-solid fa-microphone-slash"></i></button>
+        <button class="mute" id="muteVideo"><i class="fa-solid fa-video-slash"></i></button>
+        <button class="mute" id="shareScreen"><i class="fa-solid fa-desktop"></i></button>
+        <button class="hang" id="hangup"><i class="fas fa-phone-slash"></i></button>
+      </div>
+      <div class="localstream">
+        <video id="localVideo" autoplay playsinline></video>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+<script src="./js/home.js"></script>
+</html>
