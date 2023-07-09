@@ -3,7 +3,7 @@ let remoteStream = null;
 let localVideo = document.getElementById("localVideo");
 let remoteVideo = document.getElementById("remoteVideo");
 let peerConnection;
-var socket = io("https://15.207.180.128:3030", {
+var socket = io("ws://localhost:3000", {
   transports: ["websocket"],
 });
 let serverConfig = {
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     peerConnection.close();
     peerConnection = null;
     socket.disconnect();
-    window.location.href = "index.html";
+    window.location.href = "callEnd.html";
   });
   function startScreenSharing() {
     let constraints = {
